@@ -19,8 +19,8 @@ public class CrimeViewModel extends ViewModel {
         mRepository = CrimeDBRepository.getInstance(context);
         if (mMutableLiveData == null)
             mMutableLiveData = new MutableLiveData<>();
-        mMutableLiveData.postValue(mRepository.getList());
-
+        //mMutableLiveData.postValue(mRepository.getList());
+        mMutableLiveData.setValue(mRepository.getList());
     }
 
     public MutableLiveData<List<Crime>> getMutableLiveData() {
